@@ -1,0 +1,13 @@
+@import '~quill/dist/quill.snow.css';
+
+quill-editor {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  .ql-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+}

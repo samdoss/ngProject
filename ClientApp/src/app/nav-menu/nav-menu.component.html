@@ -1,0 +1,35 @@
+<button mdcIconButton (click)="toggleDrawer()" icon="menu" *ngIf="drawerType === 'modal'"></button>
+<mdc-drawer [drawer]="drawerType" *ngIf="(isLoggedIn | async)" open="{{ isExpanded }}">
+  <mdc-drawer-header title="Main Menu"></mdc-drawer-header>
+  <mdc-drawer-content>
+    <a
+      mdc-list-item
+      routerLink="/home"
+      [routerLinkActive]="['mdc-list-item--activated']"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mdc-icon mdcListItemGraphic>home</mdc-icon>
+      Home
+    </a>
+    <a mdc-list-item routerLink="/connect-project" [routerLinkActive]="['mdc-list-item--activated']">
+      <mdc-icon mdcListItemGraphic>device_hub</mdc-icon>
+      Connect Project</a
+    >
+    <a mdc-list-item routerLink="/projects" [routerLinkActive]="['mdc-list-item--activated']">
+      <mdc-icon mdcListItemGraphic>dashboard</mdc-icon>
+      Projects</a
+    >
+    <a mdc-list-item routerLink="/counter" [routerLinkActive]="['mdc-list-item--activated']">
+      <mdc-icon mdcListItemGraphic>school</mdc-icon>
+      Counter
+    </a>
+    <a mdc-list-item routerLink="/fetch-data" [routerLinkActive]="['mdc-list-item--activated']">
+      <mdc-icon mdcListItemGraphic>view_list</mdc-icon>
+      Fetch data
+    </a>
+    <a mdc-list-item routerLink="/realtime" [routerLinkActive]="['mdc-list-item--activated']">
+      <mdc-icon mdcListItemGraphic>view_list</mdc-icon>
+      Realtime
+    </a>
+  </mdc-drawer-content>
+</mdc-drawer>
